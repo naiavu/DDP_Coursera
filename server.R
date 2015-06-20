@@ -29,7 +29,7 @@ shinyServer(
             bmi <- bmiVal()
             
             if(bmi>=30)
-                output$result <- renderText('Obesity')
+                output$result <- renderText('Obese')
             else if(bmi>=25)
                 output$result <- renderText('Overweight')
             else if(bmi>=18.5)

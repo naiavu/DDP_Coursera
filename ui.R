@@ -3,7 +3,7 @@ shinyUI(pageWithSidebar(
     
     headerPanel("Body Mass Index (BMI) Calculator"),
     sidebarPanel(
-        h5('Please check measurement unit, then select your height and weight:'),
+        h5('Please choose measurement unit, then select your height and weight:'),
        
         radioButtons("heightUnit","",c("m"="m","feet"="f")),
         conditionalPanel(
@@ -13,7 +13,7 @@ shinyUI(pageWithSidebar(
         conditionalPanel(
             condition = "input.heightUnit == 'f'",
             sliderInput('heightFeet', 'Height (feet)',value = 4, min = 4, max = 7, step = 1),
-            sliderInput('heightInch', 'Height (inches)',value = 0, min = 0, max = 11, step = 0.5)
+            sliderInput('heightInch', 'Height (inches)',value = 0, min = 0, max = 11.5, step = 0.5)
         ),
        
         radioButtons("weightUnit","",c("kg"="kg","pounds"="pounds")),
